@@ -1,0 +1,33 @@
+.box {
+    border: 1px solid #333;
+    background: #555;
+    box-shadow: 0 0 15px #000;
+    color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    margin: auto;
+    padding: 10px;
+    width: 500px;
+    height: 280px;
+}
+.box_title {
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.box_row {
+    height: 90%;
+    padding: 0 15px;
+}
+.box_row_div {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    // overflow: hidden;
+}

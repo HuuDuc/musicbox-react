@@ -1,0 +1,42 @@
+.list_container {
+    height: 100%;
+    position: relative;
+}
+.list_ul {
+    background: #777;
+    border: 1px solid #333;
+    list-style: none;
+
+    height: 100%;
+    padding: 0;
+}
+
+.list_li {
+    cursor: pointer;
+    padding: 6px;
+}
+.list_li:nth-child(odd) {
+    background: #666;
+}
+.list_li:hover {
+    background: #555;
+}
+
+.selected {
+    composes: list_li;
+    background: #8bc34a !important;
+}
+.list_add {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-bottom: 10px; 
+}
+.list_add:hover {
+    color: #8bc34a;
+}

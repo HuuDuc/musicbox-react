@@ -1,0 +1,37 @@
+{
+  "name": "musicbox",
+  "version": "1.0.0",
+  "description": "MusicBox build with webpack - reactjs - css module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephane Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "react": "^15.3.0",
+    "react-bootstrap": "^0.30.0",
+    "react-dom": "^15.3.0",
+    "react-router": "^2.6.1",
+    "react-timer-mixin": "^0.13.3",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.11.1",
+    "bootstrap": "^3.3.7",
+    "react": "^15.3.0",
+    "react-bootstrap": "^0.30.0",
+    "react-dom": "^15.3.0"
+  }
+}
