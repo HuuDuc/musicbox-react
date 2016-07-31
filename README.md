@@ -11,7 +11,7 @@ Then
 webpack-dev-server --watch
 ```
 
-In your favourite internet browser, open a tab with the URL below
+In your favourite internet browser, open a tab and copy/past the URL below
 ```
 http://localhost:8080
 ```
