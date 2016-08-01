@@ -1,7 +1,7 @@
 'use strict'
 
 import React, { Component } from 'react'
-import styles from './Add.css'
+import styles from './Add.scss'
 
 export default class Add extends Component
 {
@@ -18,31 +18,25 @@ export default class Add extends Component
         this.change = this.handleChange.bind(this)
     }
 
-    handleHideForm(add = false)
+    handleHideForm()
     {
-        let url = this.state.url.trim(),
-            title = this.state.title.trim()
-
         this.setState({
             url: '',
             title: '',
             hide: true
         })
-
-        if (add == true && title != '' && url != '') {
-            this.props.addMusic({
-                url: url,
-                title: title,
-            })
-        }
     }
 
     handleSubmit()
     {
-        this.setState({
-            hide: true
-        })
-        this.handleHideForm(true)
+        let data = {
+            url: this.state.url.trim(),
+            title: this.state.title.trim()
+        }
+         
+        if (data.url && data.title) {
+            this.props.addMusic(data)
+        }
     }
 
     handleChange(event)
@@ -62,6 +56,12 @@ export default class Add extends Component
                 hide: !props.show
             })
         }
+
+        if (props.show == 'added') {
+            this.setState({
+                hide: true
+            })
+        }
     }
 
     render()
@@ -78,7 +78,7 @@ export default class Add extends Component
         const hide = this.state.hide ? form_container_hide : form_container
 
         return (
-            <div className={hide}>
+            <div className={hide} ref='formContainer'>
                 <span onClick={this.hideForm} className={"glyphicon glyphicon-remove " + form_close} aria-hidden="true"></span>
                 <h3 className={"text-center text-uppercase " + form_h3}>Add music</h3>
                 <p className="text-center">

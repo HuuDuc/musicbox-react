@@ -43,11 +43,17 @@ var config = {
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, 
         loader: 'url?limit=10000&mimetype=image/svg+xml'
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loaders: [
+          'style',
+          'css?modules&camelCase=dashes&importLoaders=2&localIdentName=[name]__[local]__[hash:base64:5]',
+          'postcss',
+          'sass'
+        ]
       }
-      /*{
-          test: /\.scss$/,
-          loader: 'style!sass-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
-      }*/
     ]
   }
 }

@@ -1,7 +1,7 @@
 'use strict'
 
 import React, { Component } from 'react'
-import styles from './ListMusic.css'
+import styles from './ListMusic.scss'
 
 export default class ListMusic extends Component
 {

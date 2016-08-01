@@ -1,7 +1,7 @@
 'use strict'
 
 import React, { Component } from 'react'
-import styles from './Box.css'
+import styles from './Box.scss'
 
 import Reader from '../Reader/Reader'
 import ListMusic from '../ListMusic/ListMusic'
@@ -28,6 +28,10 @@ export default class Box extends Component
     {
         this.state.musics = [
             {
+                title : 'Nokia - Ringtone',
+                url: 'http://files-01.mobilesringtones.com/files/2015/05/21/10757/10757.mp3'
+            },
+            {
                 title : 'GReeeeN - キセキ',
                 url: 'https://dl-web.dropbox.com/get/GReeeeN%20-%20%E3%82%AD%E3%82%BB%E3%82%AD.mp3?_subject_uid=26551443&w=AAAX1UUbcSRrrmvVcZ_ETQ4rIEabCevRjUvMNqEGuPfXDQ&duc_id=dropbox_duc_id&dl=0'
             },
@@ -48,8 +52,7 @@ export default class Box extends Component
     {
         this.setState({
             choice: e,
-            switch: false,
-            displayForm: false
+            switch: false
         })
     }
 
@@ -73,7 +76,8 @@ export default class Box extends Component
         musics.push(e)
 
         this.setState({
-            musics: musics
+            musics: musics,
+            displayForm: 'added'
         })
     }
 
